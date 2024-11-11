@@ -1,0 +1,208 @@
+.titulo1 {
+  text-align: center;
+}
+
+.titulo2 {
+  text-align: center;
+}
+
+.titulo3 {
+  text-align: center;
+  padding: 5px;
+}
+
+.titulo4 {
+  text-align: center;
+  color: rgb(219, 182, 16);
+}
+
+.paragrafo {
+  text-align: center;
+  font-style: bold;
+  font-size: 18px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: rgb(226, 194, 13);
+}
+
+h2 {
+  padding: 20px;
+  color: rgb(230, 215, 17);
+}
+
+p {
+  margin-top: 20px;
+}
+
+.final {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.genero {
+  text-align: center;
+  padding: 20px;
+  text-size-adjust: 17px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Roboto', sans-serif; /* Fonte para o corpo do texto */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Fonte para títulos */
+    color: red;
+    font-size: 34px;
+}
+main { 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
+  padding: 2px;
+}
+
+.carrossel {
+  display: flex; /* Dispor os itens lado a lado */
+  width: 100%; /* 100% para cada item, ajustando para 3 slides */
+  animation: slide 6s infinite; /* Ajuste a duração conforme necessário */
+  gap: 5px;
+}
+
+.item {
+  flex: 1 0 100%; /* Ocupa 100% do container */
+  height: 500px; /* Ajuste conforme necessário */
+}
+
+.item img {
+  max-width: 100%; /* Imagem ocupa toda a largura do item */
+  max-height: 100%; /* Imagem ocupa toda a altura do item */
+  object-fit: cover; /* Ajuste para evitar distorção */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Posição inicial */
+  }
+  33.33% {
+    transform: translateX(-100%); /* Mostra o segundo slide */
+  }
+  66.66% {
+    transform: translateX(-200%); /* Mostra o terceiro slide */
+  }
+  100% {
+    transform: translateX(0); /* Volta ao início */
+  }
+}
+
+.caixa1 {
+  margin: 30px;
+  padding: 30px;
+  border: 2px solid;
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  transition: all 0.5s ease-in-out; /* Transição suave para as mudanças */
+  animation: rgbBorder 6s infinite;
+}
+/*Caixa imagens*/
+.caixa2 {
+  margin: 5px;
+  padding: 20px;
+  border: 6px solid red;
+  background-color: black;
+  border-radius: 20px;
+}
+/*Caixa central*/
+.caixa3 {
+  margin: 30px;
+  padding: 30px;
+  border: 3px solid white;
+  background-color: black;
+  border-radius: 6px;
+  color: white;
+}
+
+.caixa4 {
+  margin: 20px;
+  padding: 12px;
+  border: 20px;
+  background-color: black;
+  color: red;
+}
+
+.fim {
+  text-align: center;
+  color: red;
+  font-size: 30px;
+}
+
+.destaque {
+  font-weight: bold;
+  color: red;
+}
+
+@keyframes rgbBorder {
+  0% {
+    box-shadow: 0 0 15px 5px red;
+  }
+  14% {
+    box-shadow: 0 0 15px 5px orange;
+  }
+  28% {
+    box-shadow: 0 0 15px 5px yellow;
+  }
+  42% {
+    box-shadow: 0 0 15px 5px green;
+  }
+  56% {
+    box-shadow: 0 0 15px 5px cyan;
+  }
+  70% {
+    box-shadow: 0 0 15px 5px blue;
+  }
+  84% {
+    box-shadow: 0 0 15px 5px violet;
+  }
+  100% {
+    box-shadow: 0 0 15px 5px red;
+  }
+}
+
+.graficos {
+  width: 100%;
+  max-width: 800px; /* Limite de largura para textos mais confortáveis */
+  margin: 0 auto; /* Centraliza a div na tela */
+  text-align: center;
+  color: white;
+  padding: 20px; /* Espaçamento ao redor do texto */
+}
+
+.grafico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0; /* Espaçamento ao redor da imagem */
+}
+
+.grafico img {
+  max-width: 100%; /* Garante que a imagem ocupe no máximo a largura da tela */
+  height: auto; /* Mantém a proporção original da imagem */
+  border-radius: 10px; /* Suaviza os cantos da imagem, opcional */
+}
